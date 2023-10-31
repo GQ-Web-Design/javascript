@@ -3,8 +3,8 @@
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let num1 = prompt('Inserisci un numero!');
-let num2 = prompt('Inserisci un numero!');
+let num1 = parseInt(prompt('Inserisci un numero!'));
+let num2 = parseInt(prompt('Inserisci un numero!'));
 
 if(num1 > num2){
   console.log(num1 + ' è maggiore di ' + num2);
@@ -18,12 +18,10 @@ if(num1 > num2){
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let num = prompt('Inserisci un numero!');
+let num3 = parseInt(prompt('Inserisci un numero!'));
 
-if(num != 5){
-  console.log(num + ' è diverso da 5');
-}else{
-  console.log(num + ' è uguale a 5');
+if(num3 != 5){
+  console.log(num3 + ' not equal 5');
 }
 
 
@@ -32,40 +30,39 @@ if(num != 5){
   Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-let num = prompt('Inserisci un numero!');
+let num4 = prompt('Inserisci un numero!');
 
-if(num % 5 === 0){
-  console.log(num + ' è divisibile per 5');
+if(num4 % 5 === 0){
+  console.log(num4 + ' è divisibile per 5');
 }else{
-  console.log(num + ' NON è divisibile per 5');
+  console.log(num4 + ' NON è divisibile per 5');
 }
 
 
 /* ESERCIZIO 4
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* SCRIVI QUI LA TUA RISPOSTA*/
 
-let num1 = parseInt(prompt('Inserisci un numero!'));
-let num2 = parseInt(prompt('Inserisci un numero!'));
+let num5 = parseInt(prompt('Inserisci un numero!'));
+let num6 = parseInt(prompt('Inserisci un numero!'));
 
 console.log(typeof num1);
 console.log(typeof num2);
 
 if (num1 === 8 || num2 === 8){
 
-    let num3 = (num1 === 8 || num2 === 8);
-    console.log(num3 + ' è uguale ad 8');
+    let num7 = (num1 === 8 || num2 === 8);
+    console.log(num7 + ' è uguale ad 8');
 
-}else if (num1 + num2 === 8 || num1 - num2 === 8){
+}else if (num5 + num6 === 8 || num5 - num6 === 8){
   
-    let num4 = (num1 + num2 === 8 || num1 - num2 === 8);
-    console.log('Il risultato della somma/sottrazione tra i due numeri è' + num4);
+    let num8 = (num5 + num6 === 8 || num5 - num6 === 8);
+    console.log('Il risultato della somma/sottrazione tra i due numeri è' + num8);
 
 } else {
   console.log('il numero 8 non è presente');
 }
-
 
 
 /* ESERCIZIO 5
@@ -84,7 +81,6 @@ if(totalShoppingCart >= 50){
   let nuovoTotale = totalShoppingCart + 10;
   console.log("NON hai diritto alla spedizione gratuita, l'importo è maggiorato di 10 euro. Quindi spendi " + nuovoTotale);
 }
-
 
 
 /* ESERCIZIO 6
@@ -107,7 +103,6 @@ if(totalShoppingCart != null && totalShoppingCart >= 50){
 }
 
 
-
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
   Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo il loro valore, dal più alto al più basso.
@@ -115,27 +110,27 @@ if(totalShoppingCart != null && totalShoppingCart >= 50){
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let num1 = parseInt(prompt('Inserisci un numero!'));
-let num2 = parseInt(prompt('Inserisci un numero!'));
-let num3 = parseInt(prompt('Inserisci un numero!'));
+let num9 = parseInt(prompt('Inserisci un numero!'));
+let num10 = parseInt(prompt('Inserisci un numero!'));
+let num11 = parseInt(prompt('Inserisci un numero!'));
 
-if (num1 >= num2 && num1 >= num3) {
-  if (num2 >= num3) {
-    console.log(num1, num2, num3);
+if (num9 >= num10 && num9 >= num11) {
+  if (num10 >= num11) {
+    console.log(num9, num10, num11);
   } else {
-    console.log(num1, num3, num2);
+    console.log(num9, num11, num10);
   }
-} else if (num2 >= num1 && num2 >= num3) {
-  if (num1 >= num3) {
-    console.log(num2, num1, num3);
+} else if (num10 >= num9 && num10 >= num11) {
+  if (num9 >= num11) {
+    console.log(num10, num9, num11);
   } else {
-    console.log(num2, num3, num1);
+    console.log(num10, num11, num9);
   }
 } else {
-  if (num1 >= num2) {
-    console.log(num3, num1, num2);
+  if (num9 >= num10) {
+    console.log(num11, num9, num10);
   } else {
-    console.log(num3, num2, num1);
+    console.log(num11, num10, num9);
   }
 }
 
@@ -145,15 +140,15 @@ if (num1 >= num2 && num1 >= num3) {
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let num1 = parseInt(prompt('Inserisci un valore!'));
-let num2 = prompt('Inserisci un valore!');
+let num12 = parseInt(prompt('Inserisci un valore!'));
+let num13 = prompt('Inserisci un valore!');
 
-if (typeof num1 === "number"){
+if (typeof num12 === "number"){
   console.log("Il valore è un numero")
 } else{
   console.log("Il valore non è un numero")
 }
-
+*/
 
 
 /* ESERCIZIO 9
@@ -236,14 +231,44 @@ const me = {
   lastName: 'Doe',
   skills: ['javascript', 'html', 'css'],
 }
+me.splice(1, 2);
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+let arr = [];
 
+arr[0] = 1;
+arr[1] = 2;
+arr[2] = 3;
+arr[3] = 4;
+arr[4] = 5;
+arr[5] = 6;
+arr[6] = 7;
+arr[7] = 8;
+arr[8] = 9;
+arr[9] = 10;
+
+console.log(arr);
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
+let arr = [];
+
+arr[0] = 1;
+arr[1] = 2;
+arr[2] = 3;
+arr[3] = 4;
+arr[4] = 5;
+arr[5] = 6;
+arr[6] = 7;
+arr[7] = 8;
+arr[8] = 9;
+arr[9] = 10;
+
+arr.splice(9, 9, 100)
+
+console.log(arr);
