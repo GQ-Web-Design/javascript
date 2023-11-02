@@ -90,10 +90,10 @@ if(totalShoppingCart >= 50){
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 
-let totalShoppingCart = parseInt(prompt('Inserisci un numero!'));
+let totalShoppingCart2 = parseInt(prompt('Inserisci un numero!'));
 let spedizione = 10;
 
-if(totalShoppingCart != null && totalShoppingCart >= 50){
+if(totalShoppingCart2 != null && totalShoppingCart2 >= 50){
   console.log('Hai diritto allo sconto del 20% su ogni prodotto');
   console.log('Hai diritto alla spedizione gratuita');
 }else{
@@ -178,15 +178,15 @@ if(num % 2 === 0){
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 //let val = 7;
-let val = parseInt(prompt('Inserisci un numero!'));
-if (val < 10 && val >= 6) {
-  console.log("Meno di 10");
-} else if (val <= 5) {
-  console.log("Meno di 5");
-} else {
-  console.log("Uguale a 10 o maggiore");
-};
+  let val = parseInt(prompt('Inserisci un numero!'));
 
+  if (val < 5) {
+      console.log("Meno di 5");
+    } else if (val < 10) {
+      console.log("Meno di 10");
+    } else {
+      console.log("Uguale a 10 o maggiore");
+    };
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
 */
