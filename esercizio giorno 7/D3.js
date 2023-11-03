@@ -127,9 +127,9 @@ const starWarsCharacters = [
   let femaleCharacters = [];
 
   for (let i=0; i < starWarsCharacters.length; i++){
-        if(starWarsCharacters[i].gender === "female"){
-            femaleCharacters.push(starWarsCharacters[i].gender);
-        }
+      if(starWarsCharacters[i].gender === "female"){
+          femaleCharacters.push(starWarsCharacters[i].gender);
+      };
     };
     console.log(femaleCharacters); 
   /* ESERCIZIO 4
@@ -148,8 +148,7 @@ const starWarsCharacters = [
     Utilizza uno switch statement per inserire uno ad uno gli oggetti dei personaggi di "starWarsCharacters" negli array relativi al colore degli occhi precedentemente creati.
     Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
   */
-    for (i = 0;i<starWarsCharacters.length;i++)
-{
+    for (i = 0;i<starWarsCharacters.length;i++){
   switch (starWarsCharacters[i].eye_color)
   {
     case "blue":
@@ -175,11 +174,11 @@ console.log(eyeColor);
     Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
   */
     let crewMass = 0;
-    i=0;
+    let c=0; //variabile contatore
 
-    while(i < starWarsCharacters.length){
+    while(c < starWarsCharacters.length){
         crewMass += starWarsCharacters[i].mass;
-        i++
+        c++;
       }
       console.log(crewMass);
 
@@ -237,7 +236,25 @@ while(i<starWarsCharacters.length){
     Una volta fatto crea un console.log per controllare la proprietà length di "characters" prima e dopo l'operazione.
   */
   
+    for(let i=0; i<femaleCharacters.length; i++){
+      //console.log(femaleCharacters[i].name);
+      for(let j=0; j<characters.length; j++){
+        if(characters[j] === femaleCharacters[i].name){
+          //console.log(femaleCharacters[i].name);
+          characters.splice(j,1);
+        };
+      };
+    };
+    
+
   /* --EXTRA-- ESERCIZIO 10
     Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
   */
   
+    let rand = Math.random() * 10;
+    console.log(rand);
+    let randFloor = Math.floor(rand);
+    console.log(randFloor);
+    
+    console.log(starWarsCharacters[randFloor]);
+    
