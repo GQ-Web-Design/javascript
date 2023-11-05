@@ -27,8 +27,8 @@ function crazySum(num1,num2){
         let sum1 = (num1 + num2) * 3;
         return sum1;
     }    
-        let sum2 = num1 + num2;
-        return sum2
+    let sum2 = num1 + num2;
+    return sum2;
 };
 var sum3 = crazySum(num1,num2);
 console.log("La somma è :" + sum3);*/
@@ -107,36 +107,80 @@ check3and7(n);*/
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* SCRIVI QUI LA TUA RISPOSTA 
 
 let stringa = prompt("Inserisci un valore");
 
-function reverseString (stringa){
-    if (stringa === "epicode"){
-        let str = stringa.replaceAll('EDOCIPE');
-        return str;
-    }else {
-        return stringa;
-    }
+function reverseString(stringa) {
+    
+    let arrayStringa = stringa.split("");
+    let inversione = arrayStringa.reverse();
+    let join = inversione.join("");
+    
+    return join; 
 }
-console.log(reverseString(stringa));
+ 
+console.log(reverseString(stringa));*/
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
+/* SCRIVI QUI LA TUA RISPOSTA 
+let stringa = prompt("Inserisci un valore");
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+    function upperFirst (stringa) {
+
+        let arrayStringa = stringa.split(' ') //trasformazione frase in array
+        //console.log(arrayStringa); verifico il codice preso
+
+        let arrayNuovaStringa = [] //dichiarazione array d'appoggio stringa vuota
+
+        for (let i = 0; i < arrayStringa.length; i++) { // Ciclo For sulla lunghezza dell'array
+
+            let primoCarattere = arrayStringa[i].charAt(0) //identifico l'iniziale di ogni parola contenuta nell'array a mezzo di charAt()
+            
+            let primoCarattereParola = primoCarattere.toUpperCase() //assegno nuova variabile per memorizzare la nuova lettera capitalizzata
+
+            let eliminoVecchiaIniziale = arrayStringa[i].slice(1) // elimino la prima lettera di ogni parola contenuta nell'array a mezzo di slice()
+
+            let sostituzionePrimaLettera = primoCarattereParola + eliminoVecchiaIniziale //sostituisco la vecchia lettera minuscola con la nuova maiuscola
+
+            arrayNuovaStringa.push(sostituzionePrimaLettera) //immetto nel nuovo array il contenuto di sostituzionePrimaLettera
+        }
+        console.log(arrayNuovaStringa.join(' '));
+    }
+  
+  upperFirst(stringa);*/
+
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
+/* SCRIVI QUI LA TUA RISPOSTA 
+let stringa = prompt("Inserisci un valore");
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function cutString(stringa) {
+    return stringa.slice(1, -1);
+}
+
+console.log(cutString(stringa));*/
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+let n = parseInt(prompt("Inserisci un valore"));
+
+let arrayNumeri = []
+
+function giveMeRandom(n) {
+    for(let i=0; i<n; i++){
+        arrayNumeri.push(Math.floor(Math.random() * 10))
+    }
+    return arrayNumeri;
+}
+
+console.log(giveMeRandom(n));
