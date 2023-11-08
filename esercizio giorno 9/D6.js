@@ -11,10 +11,10 @@ function func1(val1, val2){
     let val4 = val1.slice(0,2);
     let val5 = val2.slice(-3);
     let val6 = val4.concat(val5);
-    console.log(val6.toUpperCase());
+    return val6.toUpperCase()
 }
-func1(a,b)
-*/
+console.log(func1(a,b));*/
+
 
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
@@ -42,9 +42,9 @@ function pari(){
     arr2.push(Math.floor(Math.random()* 100));
   }
   console.log(arr2);
-  console.log(arr2.filter((arr2) => arr2%2 === 0))
+  return arr2.filter(ele => ele % 2 === 0)
 }
-pari()*/
+console.log(pari());*/
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
@@ -55,12 +55,12 @@ function sommaArray(){
   for(i=0; i<10; i++){
     arr3.push(Math.floor(Math.random()* 100));
   }
-  let s = 0;
-  arr3.forEach(arrVal =>{s += arrVal});
+  let somma = 0;
+  arr3.forEach(arrVal => somma += arrVal);
   console.log(s);
 }
-sommaArray()
-*/
+sommaArray()*/
+
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
@@ -73,7 +73,7 @@ function sommaArray2(){
     arr4.push(Math.floor(Math.random()* 100));
   }
   console.log(arr4);
-  let varAppoggio = arr4.reduce((valPrec, valCorr) => valPrec + valCorr, 0);
+  let varAppoggio = arr4.reduce((somma, ele) => somma += ele, 0);
   console.log(varAppoggio);
 }
 sommaArray2()
@@ -91,7 +91,7 @@ function arrNum2(){
     arr5.push(Math.floor(Math.random()* 100));
   }
   console.log(arr5);
-  let varAppoggio2 = arr5.map((eleArr) => eleArr + num1)
+  let varAppoggio2 = arr5.map(eleArr => eleArr + num1)
   console.log(varAppoggio2);
 }
 arrNum2()
@@ -102,12 +102,27 @@ arrNum2()
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 
-let arrStr1 = ["EPICODE", "is", "great"]
-let lunghezza = arrStr1.map();
+/*
+function getStrLength(arrStr1){
+  return arrStr1.map(str => str.length)
+}
+console.log(getStrLength(["EPICODE", "is", "great"]))
+*/
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+const getDispari = () => {
+  let arr6 = [];
+  for(let i=0; i<100; i++){
+    if(i % 2 !== 0){
+      arr6.push(i);
+    };
+  };
+  return arr6
+}
+console.log(getDispari())
+
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 /*
